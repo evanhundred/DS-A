@@ -1,0 +1,107 @@
+2
+3
+4
+
+
+121
+
+
+
+121211
+21222
+
+a 4
+b 8
+
+
+
+select name, phone, age from employee group by name, phone, age having count(*) > 1;
+
+select a.*
+from employee a
+join (select name, type, description)
+
+select a.*
+from employee a
+join (select name, phone, age, count(*)
+from employee
+group by name, phone, age
+having count(*) > 1 ) b
+on a.name = b.name
+and b.phone = b.phone
+and a.age = b.age
+order by a.name;
+
+| name      |
++-----------+
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Cersie    |
+| Cersie    |
+| Edward    |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Edward    |
+| Edward    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tywinia   |
+| Tyrionia  |
+| Jamieia   |
+| Cersieia  |
+| Cersieia  |
+| Edwardia  |
+| Tywinia   |
+| Tyrionia  |
+| Jamieia   |
+| Tywinia   |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Cersie    |
+| Cersie    |
+| Edward    |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Edward    |
+| Edward    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Tyrionia  |
+| Edwardia  |
+| Edwardia  |
+| Jamieia   |
+| Tywinia   |
+| Tyrionia  |
+| Jamieia   |
+| Tywinia   |
+| Tyrionia  |
+| Tywin     |
+| Tyrion    |
+| Jamie     |
+| Cersie    |
+| Cersie    |
+| E{-truncated-}

@@ -1,0 +1,11 @@
+OOP - Object Oriented Programming
+Class based
+
+Method overloading
+Two or more methods can have the same name if they have different method signatures.
+Same name, different signatures - method is overloaded.
+
+modularity
+	code organization and reusability
+
+encapsulation - 'who' can call or access the code
