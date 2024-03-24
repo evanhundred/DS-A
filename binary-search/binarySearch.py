@@ -1,5 +1,25 @@
 import math
 
+def searchLine(nums, target):
+    if nums[0] == target:
+        return 0
+    if len(nums) <= 1:
+        return -1
+
+    midpoint = math.floor(len(nums) / 2)
+    left = nums[:midpoint]
+    right = nums[midpoint:]
+
+    leftResult = self.searchLine(left)
+    if leftResult != -1:
+        return leftResult
+    rightResult = self.searchLine(right)
+    if rightResult != -1:
+        return rightResult + midpoint
+        
+        return -1
+
+# prev
 def search(nums, target):
     if len(nums) == 1:
         if nums[0] != target:
