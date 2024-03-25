@@ -1,13 +1,26 @@
 import math
 
-# def minEatingSpeed(piles, h):
-def good(speed, hours):
-	return 0
-
 def minEatingSpeed(piles, h):
-    l = 0
-    r = 1
-    return 1
+        l, r = 0, 1
+
+        def good(speed):
+            hours = 0
+            for idx in piles:
+                hours += (idx + speed - 1) // speed        
+            return hours <= h
+
+        while not good(r):
+            r *= 2
+        
+        while r > l + 1:
+            midpoint = (r - l) // 2 + l
+            if good(midpoint):
+                r = midpoint
+            else:
+                l = midpoint
+
+        return r
+
 
 piles = [3,6,7,11]
 h = 8
