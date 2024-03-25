@@ -1,9 +1,13 @@
 import math
 
-def minEatingSpeed(piles, h):
-	total = sum(piles)
+# def minEatingSpeed(piles, h):
+def good(speed, hours):
+	return 0
 
-	return math.ceil(total / h)
+def minEatingSpeed(piles, h):
+    l = 0
+    r = 1
+    return 1
 
 piles = [3,6,7,11]
 h = 8
