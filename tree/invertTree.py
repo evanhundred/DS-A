@@ -1,10 +1,20 @@
 def invertTree(root):
 	result = []
+	idx = 0
+	countForRow = 1
+	maxForRow = 1
+
 	while idx < len(root):
-		if idx == 0:
-			result.append(root[idx]
-		elif idx < 3:
-		 
+		if count > maxForRow:
+			maxForRow *= 2
+		if idx + maxForRow >= len(root):
+			maxForRow = len(root) - idx
+		while countForRow < maxForRow:
+			result.append
+			
+		
+		
+		idx += 1
 			
 	return result
 
