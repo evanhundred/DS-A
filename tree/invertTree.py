@@ -1,5 +1,12 @@
 def invertTree(root):
-	return 0
+	result = []
+	while idx < len(root):
+		if idx == 0:
+			result.append(root[idx]
+		elif idx < 3:
+		 
+			
+	return result
 
 root = [4,2,7,1,3,6,9]
 print(invertTree(root))
