@@ -1,19 +1,27 @@
 def twoSum(numbers, target)
+        result = []
         x = 0
         y = len(numbers) - 1
-        result = []
+        num1 = numbers[x]
+        num2 = numbers[y]
+        if num2 + num1 < target:
+                return result
+                
+        lastItered = "x"
         isComplete = False
         while not isComplete:
             if y <= x:
-                if x == 
                 isComplete = True
                 break
-            num1 = numbers[x]
-            num2 = numbers[y]
             if num1 + num2 == target:
                 result = [x + 1, y + 1]
                 isComplete = True
             else:
-                y += 1
+                if lastItered == "x":
+                    y += 1
+                    lastItered = "y"
+                else: 
+                    x += 1
+                    lastItered = "x"
         
         return result
