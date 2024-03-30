@@ -1,7 +1,6 @@
 # LeetCode 167
 
-def twoSum(numbers, target)
-    int]:
+def twoSum(numbers, target):
         result = []
         if len(numbers) == 0:
             return result
@@ -34,3 +33,7 @@ def twoSum(numbers, target)
                 y -= 1
                 
         return result
+
+numbers = [1,2,3]
+target = 3
+print(twoSum(numbers, target))
